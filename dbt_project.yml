@@ -8,7 +8,7 @@ config-version: 2
 
 # Set dbt Cloud Info
 dbt-cloud:
-  project-id: 406315
+  project-id: 430232
   tenant_hostname: cloud.getdbt.com # Replace with your Tenant URL
 # This setting configures which "profile" dbt uses for this project.
 profile: 'sa_snowflake'

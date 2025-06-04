@@ -2,9 +2,15 @@ version: 2
 
 models:
   - name: orders_by_customer
-    description: ""
     group: mart
     access: public
+    description: ""
+    config:
+      meta:
+        metric_dim_bk: "FY25_CUSTOMER_JOURNEY"
+        filter_start_date: "2024-07-01"
+        prior_value: "year_over_year"
+        include_current_time_period: true
     columns:
       - name: customer_id
         data_tests:
