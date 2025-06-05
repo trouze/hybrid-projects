@@ -5,12 +5,6 @@ models:
     group: mart
     access: public
     description: ""
-    config:
-      meta:
-        metric_dim_bk: "FY25_CUSTOMER_JOURNEY"
-        filter_start_date: "2024-07-01"
-        prior_value: "year_over_year"
-        include_current_time_period: true
     columns:
       - name: customer_id
         data_tests:
@@ -19,6 +13,14 @@ models:
       - name: last_initial
       - name: max_order_date
       - name: min_order_date
+
+groups:
+  - name: mart
+    owner:
+      # 'name' or 'email' is required; additional properties allowed
+      email: mart@jaffleshop.com
+      slack: mart-data
+      github: mart-data-team
 
 exposures:
   - name: jaffle_order_metrics
@@ -34,11 +36,3 @@ exposures:
     owner:
       name: Tyler from A8
       email: data@jaffleshop.com
-
-groups:
-  - name: mart
-    owner:
-      # 'name' or 'email' is required; additional properties allowed
-      email: mart@jaffleshop.com
-      slack: mart-data
-      github: mart-data-team
